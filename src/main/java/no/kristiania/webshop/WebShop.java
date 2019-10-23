@@ -61,7 +61,7 @@ public class WebShop {
         Order order = new Order();
         order.setName(input.readLine());
         orderDao.insert(order);
-    }
+    } 
 
     private void insertProduct() throws IOException, SQLException {
         System.out.println("Please type the name of a new product: ");
