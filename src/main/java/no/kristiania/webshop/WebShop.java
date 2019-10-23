@@ -61,12 +61,15 @@ public class WebShop {
         Order order = new Order();
         order.setName(input.readLine());
         orderDao.insert(order);
-    } 
+    }
 
     private void insertProduct() throws IOException, SQLException {
+        Product product = new Product();
         System.out.println("Please type the name of a new product: ");
-        String productName = input.readLine();
-        productDao.insert(productName);
+        product.setName(input.readLine());
+        System.out.println("Please type the price: ");
+        product.setPrice(Double.valueOf(input.readLine()));
+        productDao.insert(product);
 
     }
 
